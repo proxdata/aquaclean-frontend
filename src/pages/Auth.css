@@ -1,0 +1,32 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  background: radial-gradient(ellipse at 30% 40%, rgba(0,212,255,0.05) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 80%, rgba(0,74,255,0.05) 0%, transparent 60%);
+}
+.auth-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 20px; padding: 40px;
+  width: 100%; max-width: 400px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.back-btn {
+  position: absolute; top: 20px; left: 20px;
+  display: flex; align-items: center; gap: 6px;
+  background: none; color: var(--text2); font-size: 13px;
+  transition: color 0.2s;
+}
+.back-btn:hover { color: var(--text); }
+.auth-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 22px; letter-spacing: 3px; margin-bottom: 4px; }
+.auth-title { font-size: 22px; font-weight: 600; color: var(--text); }
+.auth-sub { font-size: 13px; color: var(--text2); margin-bottom: 8px; text-align: center; }
+.auth-hint { font-size: 13px; color: var(--text2); text-align: center; }
+.link-btn { background: none; color: var(--accent); font-size: 13px; border: none; cursor: pointer; }
+.link-btn:hover { text-decoration: underline; }
+.form-group { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 12px; color: var(--text2); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+.form-error { color: var(--danger); font-size: 13px; align-self: flex-start; }
+.btn-full { width: 100%; justify-content: center; padding: 13px; }

@@ -1,0 +1,54 @@
+.admin-page { display: flex; min-height: 100vh; }
+.admin-main { flex: 1; padding: 40px; overflow-y: auto; }
+.admin-badge-tag { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--accent); background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); padding: 3px 10px; border-radius: 4px; margin: -16px 0 20px 8px; display: inline-block; }
+
+.admin-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+
+.admin-toolbar { display: flex; gap: 12px; margin-bottom: 20px; }
+.search-box { display: flex; align-items: center; gap: 10px; background: var(--bg2); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 14px; flex: 1; max-width: 360px; }
+.search-box input:focus { outline: none; }
+
+/* Table */
+.clients-table { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.table-header { display: grid; grid-template-columns: 2fr 1fr 1.5fr 0.8fr 0.8fr 1fr; gap: 16px; padding: 12px 20px; background: var(--bg3); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
+.table-row { display: grid; grid-template-columns: 2fr 1fr 1.5fr 0.8fr 0.8fr 1fr; gap: 16px; padding: 14px 20px; align-items: center; border-bottom: 1px solid var(--border); transition: background 0.15s; font-size: 13px; }
+.table-row:last-child { border-bottom: none; }
+.table-row:hover { background: var(--bg3); }
+
+.client-cell { display: flex; align-items: center; gap: 10px; }
+.client-mini-avatar { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex-shrink: 0; }
+.client-name-sm { font-size: 13px; font-weight: 500; color: var(--text); }
+.client-email-sm { font-size: 11px; color: var(--text3); margin-top: 1px; }
+.plan-chip { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; border: 1px solid; }
+.vehicle-sm { font-size: 12px; color: var(--text2); }
+.wash-count-sm { font-size: 13px; color: var(--text); font-weight: 500; }
+
+.action-btns { display: flex; gap: 6px; }
+.action-btn { width: 30px; height: 30px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.wash-btn { background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.2); }
+.wash-btn:hover { background: var(--accent); color: #000; }
+.del-btn { background: rgba(255,82,82,0.08); color: var(--danger); border: 1px solid rgba(255,82,82,0.2); }
+.del-btn:hover { background: var(--danger); color: #fff; }
+
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+.stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 24px; display: flex; flex-direction: column; gap: 8px; }
+.stat-card-num { font-family: var(--font-display); font-size: 40px; color: var(--text); }
+.stat-card-label { font-size: 12px; color: var(--text3); text-transform: uppercase; letter-spacing: 1px; }
+
+.plans-breakdown { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.plan-row { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
+.plan-row-name { font-size: 13px; font-weight: 600; width: 80px; flex-shrink: 0; }
+.plan-row-bar { flex: 1; height: 6px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+.plan-row-fill { height: 100%; background: var(--plan-color); border-radius: 3px; transition: width 0.6s ease; }
+.plan-row-count { font-size: 12px; color: var(--text2); width: 80px; text-align: right; flex-shrink: 0; }
+
+@media (max-width: 1000px) {
+  .table-header, .table-row { grid-template-columns: 2fr 1fr 1fr 0.8fr; }
+  .table-header span:nth-child(3), .table-row > *:nth-child(3) { display: none; }
+}
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .admin-main { padding: 20px 16px; }
+  .stats-grid { grid-template-columns: 1fr; }
+}
