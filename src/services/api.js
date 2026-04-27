@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/api'
+const BASE_URL = 'https://aquaclean-backend-production-b00b.up.railway.app/api'
 
 function getToken() {
   return localStorage.getItem('cw_token')
